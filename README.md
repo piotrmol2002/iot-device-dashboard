@@ -43,4 +43,5 @@ iot-device-dashboard/
 │   ├── package.json
 │   ├── tsconfig.json
 │   └── vite.config.ts
+│── screenshots/
 └── README.md                 # <— you are here
