@@ -45,3 +45,97 @@ iot-device-dashboard/
 │   └── vite.config.ts
 │── screenshots/
 └── README.md                 # <— you are here
+
+
+# Getting started
+
+## 1 – Prerequisites
+* Node.js ≥ 18 and npm ≥ 9
+* Running MongoDB instance (local or Atlas)
+* Two terminal windows (backend + frontend)
+
+## 2 – Clone and install root dependencies
+
+```
+git clone https://github.com/piotrmol2002/iot-device-dashboard.git
+cd iot-device-dashboard
+npm install    # optional – only if you keep root-level dev tools
+```
+
+## 3 – Run the application
+
+### Backend
+```
+cd api
+npm install
+npm run watch          # starts nodemon with ts-node
+```
+### Frontend (new terminal)
+```
+cd client
+npm install
+npm run dev            # Vite dev server → http://localhost:5173
+```
+Open http://localhost:5173
+
+# System layers
+
+## Frontend
+
+* React SPA built with Vite.
+
+* Stores the JWT in localStorage; protected routes redirect unauthenticated users.
+
+* Dashboard.tsx fetches /api/data/latest and displays device cards plus live charts.
+
+## Backend
+
+* Express server bootstrapped in index.ts.
+
+* Endpoints /api/data, /api/user, /api/auth protected by auth, role, admin, deviceIdParam middleware.
+
+* nodemon + ts-node provide hot reload in development.
+
+## Database
+
+* **readings** collection (temperature, pressure, humidity, deviceId, readingDate).
+
+* Connection and schema validation handled by Mongoose.
+
+
+# Data Flow
+```
+┌──────────────┐      POST /api/data/:id          ┌──────────────┐
+│  Device MCU  │ ────────────────────────────────▶│  Express API │
+└──────────────┘                                   │  (Validate, │
+        ▲                                          │   Persist)  │
+        │                                          └─────┬───────┘
+        │                                              │
+        │                   MongoDB                    ▼
+        │                                   ┌────────────────────┐
+        │                                   │ readings collection│
+        │                                   └───┬────────────────┘
+        │                                       │
+        │        GET /api/data/latest           ▼
+┌──────────────┐ ◀──────────────────────────── ┌──────────────┐
+│ React Client │ ←─ JWT header  x-auth-token ─ │  Express API │
+└──────────────┘                               └──────────────┘
+```
+
+# Useful npm scripts
+
+## api/package.json
+
+| Script  | Purpose |
+| ------------- |:-------------:|
+| watch      | Start dev server via nodemon     |
+| build      | Compile TypeScript to dist     |
+| start      | Run compiled JS in production     |
+
+## client/package.json
+
+| Script  | Purpose |
+| ------------- |:-------------:|
+| dev      | Vite dev server     |
+| build      | Production build     |
+| preview      | Preview production     |
