@@ -46,6 +46,18 @@ iot-device-dashboard/
 │── screenshots/
 └── README.md                 # <— you are here
 ```
+
+## Screenshots
+
+| Screen            | Preview |
+|-------------------|---------|
+| Login             | ![Login](screenshots/login-screen.png) |
+| Registration      | ![Registration](screenshots/register-screen.png) |
+| Dashboard         | ![Dashboard](screenshots/dashboard-screen.png) |
+| Admin panel       | ![Admin panel](screenshots/admin-screen.png) |
+
+---
+
 # Getting started
 
 ## 1 – Prerequisites
