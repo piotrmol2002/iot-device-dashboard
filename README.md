@@ -45,8 +45,7 @@ iot-device-dashboard/
 │   └── vite.config.ts
 │── screenshots/
 └── README.md                 # <— you are here
-
-
+```
 # Getting started
 
 ## 1 – Prerequisites
@@ -139,3 +138,4 @@ Open http://localhost:5173
 | dev      | Vite dev server     |
 | build      | Production build     |
 | preview      | Preview production     |
+
