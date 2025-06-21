@@ -1,0 +1,168 @@
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+  color: white;
+}
+
+.auth-form {
+  background-color: #1e1e1e;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+  width: 100%;
+  max-width: 400px;
+}
+
+.MuiInputBase-root {
+  background-color: #2b2b2b;
+  color: white;
+}
+
+.MuiOutlinedInput-notchedOutline {
+  border-color: #666;
+}
+
+.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: #2196f3;
+}
+
+.MuiInputLabel-root {
+  color: #ccc;
+}
+
+.Mui-focused .MuiInputLabel-root {
+  color: #2196f3;
+}
+
+.MuiButton-containedPrimary {
+  background-color: #2196f3;
+}
+
+.MuiButton-containedPrimary:hover {
+  background-color: #1769aa;
+}
+
+.MuiAlert-root {
+  background-color: #ff5555;
+  color: white;
+}
+
+.value {
+  margin-left: 15px;
+}
+
+.logo {
+  background: url("assets/ki.jpg");
+  background-size: cover;
+  width: 4vh;
+  height: 4vh;
+  margin: 3px;
+}
+
+.MuiChartsLegend-root text {
+  fill: white !important;
+}
+
+.admin-container {
+  background-color: #0f0f0f;
+  color: white;
+  min-height: 100vh;
+  padding: 32px;
+}
+
+.admin-container h4, .admin-container h6 {
+  color: #e0e0e0;
+}
+
+.MuiTableContainer-root {
+  background-color: #1e1e1e;
+  border-radius: 8px;
+}
+
+.MuiTableCell-root {
+  background-color: #1e1e1e;
+  color: white;
+  border-bottom: 1px solid #444;
+}
+
+.MuiTableHead-root .MuiTableCell-root {
+  background-color: #222;
+  font-weight: bold;
+  color: #90caf9;
+}
+
+/* Pola tekstowe */
+.admin-container .MuiInputBase-root {
+  background-color: #2b2b2b;
+  color: white;
+}
+
+.admin-container .MuiOutlinedInput-notchedOutline {
+  border-color: #555;
+}
+
+.admin-container .Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: #2196f3;
+}
+
+.admin-container .MuiInputLabel-root {
+  color: #bbb;
+}
+
+.admin-container .Mui-focused .MuiInputLabel-root {
+  color: #2196f3;
+}
+
+.back-button {
+  margin-bottom: 16px;
+  border-color: #2196f3;
+  color: #2196f3;
+}
+
+.back-button:hover {
+  background-color: rgba(33, 150, 243, 0.1);
+}
+
+.MuiButton-containedPrimary {
+  background-color: #2196f3;
+  color: white;
+}
+
+.MuiButton-containedPrimary:hover {
+  background-color: #1769aa;
+}
+
+.MuiButton-outlinedInfo {
+  border-color: #2196f3;
+  color: #2196f3;
+}
+
+.MuiButton-outlinedInfo:hover {
+  background-color: rgba(33, 150, 243, 0.1);
+}
+
+.MuiButton-outlinedError {
+  border-color: #f44336;
+  color: #f44336;
+}
+
+.MuiButton-outlinedError:hover {
+  background-color: rgba(244, 67, 54, 0.1);
+}
+
+.MuiDialog-paper {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+.MuiSelect-select {
+  background-color: #2b2b2b;
+  color: white;
+}
+
+.MuiTableBody-root .MuiTableCell-root {
+  color: #ddd !important;
+}
